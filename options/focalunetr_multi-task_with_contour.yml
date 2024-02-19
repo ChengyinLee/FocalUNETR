@@ -1,0 +1,42 @@
+# general settings
+name: FocalUNETR_contour
+manual_seed: 10 # deault
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: DataName
+    base_dir: '../MyData/Prepared/DataName'
+    list_dir: './datasets/lists/DataName'
+    split: "train"
+    output_size: [224, 224]
+    rotate_or_flip_prob: 0.1
+  val:
+    name: DataName
+    base_dir: '../MyData/Prepared/DataName'
+    list_dir: './datasets/lists/DataName'
+    split: "val_vol"
+  test:
+    name: DataName
+    base_dir: '../MyData/Prepared/DataName'
+    list_dir: './datasets/lists/DataName'
+    split: "test_vol"
+
+# training settings
+train:
+  device: cuda:1
+  optim:
+    type: SGD
+    lr: !!float 1e-2
+    weight_decay: !!float 1e-5 
+    betas: [0.9, 0.999] # for Adam
+    momentum: 0.9 # for SGD
+  scheduler: "e_decay"
+  loss_type: DiceCE
+  batch_size:
+    train: 12
+    other: 1
+  max_epoch: 500 # 200, 100, ...
+val:
+  val_type: epoch
+  val_freq: 1 #by epoch
