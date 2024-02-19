@@ -27,18 +27,18 @@ ppath = './options/focalunetr_private.yml'
 with open(ppath, mode='r') as f:
     opt = yaml.load(f, Loader=ordered_yaml()[0])
 
-model_epoch = 13
+max_epoch = 200
 cuda_idx = 7
-test_folder = './run/exp_20220608-11:56:21' # as an example
+test_folder = './run/exp_1' # as an example
 
-save_test_log_path = test_folder + f"/epoch{model_epoch}_test_log_t190.txt"
+save_test_log_path = test_folder + f"/test_log.txt"
 assert not os.path.exists(save_test_log_path)
 logging.basicConfig(filename=save_test_log_path, level=logging.INFO,
                         format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 
-model_dict_path = test_folder + f'/epoch_{model_epoch}.pth'
+model_dict_path = test_folder + f'/epoch_{max_epoch}.pth'
 ppath = test_folder + '/train_focalnetunetr.yml'
 with open(ppath, mode='r') as f:
     opt = yaml.load(f, Loader=ordered_yaml()[0])
