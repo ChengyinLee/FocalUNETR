@@ -10,3 +10,5 @@ A Focal Transformer for Boundary-aware Prostate Segmentation using CT Images (MI
 ## To DO
 - Tutorials for inference and visualization.
 - ..
+## Contact
+- cyli@wayne.edu
