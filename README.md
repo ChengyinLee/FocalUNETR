@@ -1,5 +1,5 @@
 # FocalUNETR
-A Focal Transformer for Boundary-aware Prostate Segmentation using CT Images
+A Focal Transformer for Boundary-aware Prostate Segmentation using CT Images (MICCAI20223, [paper link](https://arxiv.org/abs/2210.03189))
 ![Alt Text](focalunetr.png)
 ## Data Preprocessing
 - You can refer to [this link](https://github.com/llmir/MultitaskOCTA) for generating boundaries of the organ you would like to segment.
