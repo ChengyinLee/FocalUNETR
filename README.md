@@ -3,10 +3,10 @@ A Focal Transformer for Boundary-aware Prostate Segmentation using CT Images (MI
 ![Alt Text](focalunetr.png)
 ## Data Preprocessing
 - You can refer to [this link](https://github.com/llmir/MultitaskOCTA) for generating boundaries of the organ you would like to segment.
-- Please refer [here](https://github.com/yhygao/CBIM-Medical-Image-Segmentation) for the convention of your original datasets, e.g., resampling operations, cropping, and padding.
+- Please follow [this reference](https://github.com/yhygao/CBIM-Medical-Image-Segmentation) regarding your original datasets for conversion, such as operations for resampling, cropping, and padding.
 ## For Training and Testing
-- Following the configurations of the option folder with `yml` files, you can train and test with both w/wo contours. 
-- For more baseline models you can refer to [this link](https://github.com/yhygao/CBIM-Medical-Image-Segmentation).
+- Based on the settings in the option folder containing `yml` files, training and testing can be performed with or without using the boundary-aware regression auxiliary task. 
+- For additional baseline models, please refer to [the following resource](https://github.com/yhygao/CBIM-Medical-Image-Segmentation).
 ## To DO
 - Tutorials for inference and visualization.
 - ..
