@@ -7,7 +7,7 @@ A Focal Transformer for Boundary-aware Prostate Segmentation using CT Images (MI
 ## For Training and Testing
 - Based on the settings in the option folder containing `yml` files, training and testing can be performed with or without using the boundary-aware regression auxiliary task. 
 - For additional baseline models, please refer to [this link](https://github.com/yhygao/CBIM-Medical-Image-Segmentation).
-## To DO
+## TO DO
 - Tutorials for inference and visualization.
 - ..
 ## Contact
